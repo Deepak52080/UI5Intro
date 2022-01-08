@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" 
+controllerName="demo.controller.Main"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Button text="MyXMLButton" id="idXML" press="myXMLBtnClick"/>
+    <Text text="Welcome to XML View"/>
+    <!-- <Input width="50%" /> -->
+    <f:SimpleForm>
+        <f:content>
+        <Label text="First Name"/>
+        <Input id="idName" width="50%"/>
+        <Label text="Employee ID"/>
+        <Input id="idEmpID" width="50%"/>
+        <Label text="Address"/>
+        <Input id="idAddress" width="50%"/>
+        <Label text="Contact Number"/>
+        <Input id="idContact" width="50%"/>
+        <Label text="Salary"/>
+        <Input id="idSal" width="50%"/>
+        </f:content>
+    </f:SimpleForm>
+
+    <Button text="Submit" id="idSubmit" press="onPress"/>
+    <TextArea id="idArea" width="50%" />
+
+    
+
+
+</mvc:View>
