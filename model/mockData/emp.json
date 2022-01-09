@@ -1,0 +1,27 @@
+{
+    "empTable": [{
+            "empName": "Joe",
+            "empNo": 100,
+            "address": "212/227 New York",
+            "contact": 8090996789,
+            "skills": ["ABAP", "webdynpro", "ui5"],
+            "enabled": false
+
+        },
+        {
+            "empName": "Brandson",
+            "empNo": 200,
+            "address": "551/662 George town",
+            "contact": 7587975579,
+            "skills": ["FPM", "s/4", "BTP"]
+        }
+    ],
+
+    "empStr": {
+        "empNo": 999,
+        "empName": "carlos",
+        "address": "997 Chetham line",
+        "contact": 7474739303
+
+    }
+}

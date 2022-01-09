@@ -1,0 +1,27 @@
+{
+    "empTable": [{
+            "empName": "Modi",
+            "empNo": 888,
+            "address": "212/227 Delhi",
+            "contact": 8090996789,
+            "skills": ["ABAP", "webdynpro", "ui5"],
+            "enabled": false
+
+        },
+        {
+            "empName": "Kejriwal",
+            "empNo": 9999,
+            "address": "551/662 New Delhi",
+            "contact": 7587975579,
+            "skills": ["FPM", "s/4", "BTP"]
+        }
+    ],
+
+    "empStr": {
+        "empNo": 999,
+        "empName": "carlos",
+        "address": "997 Chetham line",
+        "contact": 7474739303
+
+    }
+}
