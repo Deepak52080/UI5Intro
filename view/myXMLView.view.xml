@@ -4,18 +4,91 @@ controllerName="demo.controller.Main"
     <Button text="MyXMLButton" id="idXML" press="myXMLBtnClick"/>
     <Text text="Welcome to XML View"/>
     <!-- <Input width="50%" /> -->
-    <f:SimpleForm>
+
+    <!-- <Table id="idTable"  items="{myNamedModel>/empTable}" mode="SingleSelectLeft" selectionChange="onSelect">
+        <columns>
+            <Column>
+                <Text text="Employee Name" />
+            </Column>
+            <Column>
+                <Text text="Emp Number" />
+            </Column>
+            <Column>
+                <Text text="Contact" />
+            </Column>
+            <Column>
+                <Text text="Salary" />
+            </Column>
+            <Column>
+                <Text text="Marital Status" />
+            </Column>
+
+        </columns>
+        <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{myNamedModel>empName}" />
+                <Text text="{myNamedModel>empNo}" />
+                <Text text="{myNamedModel>contact}" />
+                <Text text="{myNamedModel>salary}" />
+                <ComboBox value="{myNamedModel>married}">
+                    <core:Item key="Y" text="Yes"/>
+                    <core:Item key="N" text="No"/>
+                </ComboBox>
+            </cells>
+
+        </ColumnListItem>
+        </items>
+    </Table> -->
+
+    <Table id="idTable"  items="{/empTable/}" mode="SingleSelectLeft" selectionChange="onSelect">
+        <columns>
+            <Column>
+                <Text text="Employee Name" />
+            </Column>
+            <Column>
+                <Text text="Emp Number" />
+            </Column>
+            <Column>
+                <Text text="Contact" />
+            </Column>
+            <Column>
+                <Text text="Salary" />
+            </Column>
+            <!-- <Column>
+                <Text text="Marital Status" />
+            </Column> -->
+
+        </columns>
+        <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{empName}" />
+                <Text text="{empNo}" />
+                <Text text="{contact}" />
+                <Text text="{salary}" />
+                <!-- <ComboBox value="{myNamedModel>married}">
+                    <core:Item key="Y" text="Yes"/>
+                    <core:Item key="N" text="No"/>
+                </ComboBox> -->
+            </cells>
+
+        </ColumnListItem>
+        </items>
+    </Table>
+
+    <f:SimpleForm id="idForm">
         <f:content>
         <Label text="First Name"/>
-        <Input id="idName" value="{/empTable/0/empName}" enabled="{/empTable/0/enabled}" width="50%"/>
+        <Input id="idName" value="{empName}" enabled="{/empTable/0/enabled}" width="50%"/>
         <Label text="Employee ID"/>
-        <Input id="idEmpID" value="{/empTable/0/empNo}" enabled="{/empTable/0/enabled}" width="50%"/>
+        <Input id="idEmpID" value="{empNo}" enabled="{/empTable/0/enabled}" width="50%"/>
         <Label text="Address"/>
-        <Input id="idAddress" value="{myNamedModel>/empTable/0/address}" enabled="{/empTable/0/enabled}" width="50%"/>
+        <Input id="idAddress" value="{address}" enabled="{/empTable/0/enabled}" width="50%"/>
         <Label text="Contact Number"/>
-        <Input id="idContact" value="{/empTable/0/contact}" enabled="{/empTable/0/enabled}" width="50%"/>
+        <Input id="idContact" value="{contact}" enabled="{/empTable/0/enabled}" width="50%"/>
         <Label text="Salary"/>
-        <Input id="idSal" value="{/empTable/0/skills/0}" enabled="{/empTable/0/enabled}" width="50%"/>
+        <Input id="idSal" value="{salary}" enabled="{/empTable/0/enabled}" width="50%"/>
         </f:content>
     </f:SimpleForm>
 

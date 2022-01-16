@@ -67,7 +67,37 @@ sap.ui.define(
             onPressChange: function(){
                 this.oModel.setProperty("/empTable/0/enabled", true);
 
+            },
+
+            onSelect: function(oEvent){
+
+
+                // This is the one we used for Aggreation Binding concept
+
+                // // to get the binding path of slected row
+                // var oSelect = oEvent.getParameter("listItem").getBindingContextPath();
+
+                // // to gte the specific row data 
+                // var oSelctedItem = oEvent.getParameter("listItem").getBindingContext("myNamedModel").getObject();
+
+                // //var oForm = this.getView().byId("idForm");
+                // var oEmpname = this.getView().byId("idName").setValue(oSelctedItem.empName);
+                //  var oEmpNo = this.getView().byId("idEmpID").setValue(oSelctedItem.empNo);
+                // var oEmpAddress = this.getView().byId("idAddress").setValue(oSelctedItem.address);
+                // var oContact = this.getView().byId("idContact").setValue(oSelctedItem.contact);
+                // var oSalary = this.getView().byId("idSal").setValue(oSelctedItem.salary);
+
+                 // This is the one we used for Element  Binding concept
+                
+                 var oSelect = oEvent.getParameter("listItem").getBindingContextPath();
+                 var oForm = this.getView().byId("idForm");
+                 oForm.bindElement(oSelect);
+
+
+
+
             }
+
         });
 
 

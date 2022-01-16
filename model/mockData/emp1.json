@@ -5,7 +5,9 @@
             "address": "212/227 Delhi",
             "contact": 8090996789,
             "skills": ["ABAP", "webdynpro", "ui5"],
-            "enabled": false
+            "enabled": false,
+            "salary": 4000,
+            "married": "Y"
 
         },
         {
@@ -13,7 +15,18 @@
             "empNo": 9999,
             "address": "551/662 New Delhi",
             "contact": 7587975579,
-            "skills": ["FPM", "s/4", "BTP"]
+            "skills": ["FPM", "s/4", "BTP"],
+            "salary": 2200,
+            "married": "N"
+        },
+        {
+            "empName": "Yogi",
+            "empNo": 222,
+            "address": "551/662 Lucknow",
+            "contact": 9090989898,
+            "skills": ["FPM", "s/4", "BTP"],
+            "salary": 4500,
+            "married": "N"
         }
     ],
 
