@@ -1,11 +1,12 @@
 sap.ui.define(
     ["sap/ui/core/mvc/Controller",
-    "demo/model/models"],
-    function(Controller, Model){
+    "demo/model/models",
+    "demo/utils/formatter"],
+    function(Controller, Model, Formatter){
         return Controller.extend("demo.controller.Main", {
 
             //this.oLocal = "demo";
-
+            hulk: Formatter, // Formatter has been assigned to Hulk
             onInit: function(){
                 // this.oGlobalVariable = "Hello globalVarible";
 
@@ -25,12 +26,15 @@ sap.ui.define(
 
                 this.oModel1 = Model.createEmployeeModel("model/mockData/emp1.json");
 
+                this.oModel2 = Model.getResourceModel();
+
                 // seeting the model at view level
                 // this.getView().setModel(this.oModel);
 
                 //setting the model at application level 
                 //this is my deafult model
                 sap.ui.getCore().setModel(this.oModel);
+                sap.ui.getCore().setModel(this.oModel2, "i18n");
                 // this is my named model
                  sap.ui.getCore().setModel(this.oModel1, "myNamedModel");
 

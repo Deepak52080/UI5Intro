@@ -6,7 +6,8 @@
             "contact": 8090996789,
             "skills": ["ABAP", "webdynpro", "ui5"],
             "salary": 2000,
-            "enabled": false
+            "enabled": false,
+            "joiningDate": "20120809"
 
         },
         {
@@ -15,7 +16,8 @@
             "address": "551/662 George town",
             "contact": 7587975579,
             "skills": ["FPM", "s/4", "BTP"],
-            "salary": 3000
+            "salary": 3000,
+            "joiningDate": "20120810"
         }
     ],
 

@@ -1,7 +1,8 @@
 sap.ui.define(
-    ["sap/ui/model/json/JSONModel"],
+    ["sap/ui/model/json/JSONModel",
+    "sap/ui/model/resource/ResourceModel"],
     
-    function(JSONModel){
+    function(JSONModel, ResourceModel){
 
         return {
             createEmployeeModel: function(filePath){
@@ -12,6 +13,13 @@ sap.ui.define(
 
                 return oModel;
 
+            },
+
+            getResourceModel: function(){
+                var oModel = new ResourceModel({
+                        bundleUrl: 'i18n/i18n.properties'
+                });
+                return oModel;
             }
 
         }

@@ -44,16 +44,19 @@ controllerName="demo.controller.Main"
     <Table id="idTable"  items="{/empTable/}" mode="SingleSelectLeft" selectionChange="onSelect">
         <columns>
             <Column>
-                <Text text="Employee Name" />
+                <Text text="{i18n>empNameTbColumn}" />
             </Column>
             <Column>
-                <Text text="Emp Number" />
+                <Text text="{i18n>empNumberTbColumn}" />
             </Column>
             <Column>
-                <Text text="Contact" />
+                <Text text="{i18n>contactTbColumn}" />
             </Column>
             <Column>
-                <Text text="Salary" />
+                <Text text="{i18n>salaryTbColumn}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>jdTbColumn}" />
             </Column>
             <!-- <Column>
                 <Text text="Marital Status" />
@@ -63,10 +66,11 @@ controllerName="demo.controller.Main"
         <items>
         <ColumnListItem>
             <cells>
-                <Text text="{empName}" />
+                <Text text="{= ${empName} === 'Joe' ? 'Joe Biden' : ${empName}}"/>
                 <Text text="{empNo}" />
                 <Text text="{contact}" />
-                <Text text="{salary}" />
+                <Text text="{path: 'salary', formatter: '.hulk.salaryCurrencyConversion'}" />
+                 <Text text="{path : 'joiningDate', formatter: '.hulk.joiningDateConversion'}" />
                 <!-- <ComboBox value="{myNamedModel>married}">
                     <core:Item key="Y" text="Yes"/>
                     <core:Item key="N" text="No"/>
@@ -92,8 +96,8 @@ controllerName="demo.controller.Main"
         </f:content>
     </f:SimpleForm>
 
-    <Button text="Submit" id="idSubmit" press="onPress"/>
-    <Button text="Change" id="idSubmitNew" press="onPressChange"/>
+    <Button text="{i18n>mySubmitBtnText}" id="idSubmit" press="onPress"/>
+    <Button text="{i18n>myChangeBtntext}" id="idSubmitNew" press="onPressChange"/>
     <TextArea id="idArea" width="50%" />
 
     
